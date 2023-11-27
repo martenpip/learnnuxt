@@ -25,7 +25,7 @@ export default {
         axios.get('http://localhost:3001/api/messages').then(res => {
             this.messages = res.data;
         });
-    })
+    }, 10000);
     },
     data() {
         return {
