@@ -20,12 +20,11 @@ import axios from 'axios';
 export default {
     created() {
         setInterval(() => {
-            
-       
-        axios.get('http://localhost:3001/api/messages').then(res => {
-            this.messages = res.data;
-        });
-    }, 10000);
+            axios.get('http://localhost:3001/api/messages').then(res => {
+                this.messages = res.data;
+            });
+        }, 10000);
+
     },
     data() {
         return {
@@ -42,5 +41,6 @@ export default {
             });
         }
     }
+
 }
 </script>
